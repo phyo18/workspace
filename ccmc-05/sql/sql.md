@@ -41,8 +41,22 @@
 		・WHERE句（where phrase）抽出するレコードを指定するための条件
 		・ORDER By句（order by phrase）抽出したレコードの並べ替えを指定する（ASC：昇順、DESC：降順）。
 
+<<<<<<< HEAD
 		ex）itemsテーブルからid「1001」のレコードを抽出する場合
 				select * from items where id = 1001;
+=======
+		・like演算子　あいまい検索の条件を指定する場合に使用する。
+		              「%」ワイルドカードを用いる。
+
+			ex.1）itemsテーブルからid「1001」のレコードを抽出する場合
+							select * from items where id = 1001;
+	    ex.2）itemsテーブルから製品名が「デジタル」で始まる製品を抽出する場合
+	            select * from items where name like 'デジタル%';
+	    ex.3）itemsテーブルから製品名が「PC」で終わる製品を抽出する場合
+	            select * from items where name like '%PC';
+	    ex.4）itemsテーブルから製品名に「ジェット」が含まれている製品を抽出する場合
+	            select * from iitems where name like '%ジェット%';
+>>>>>>> ef6895b13049c53d4b5bcbcdb6fad7c690719fa3
 	
 	3. Update ─ UPDATE文（update statement）
 		【書式】update table_name set field_name_1 = field_value_1, field_name_2 = field_value_2, ..., field_name_n = field_value_n [where ...];
