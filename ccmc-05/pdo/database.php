@@ -1,4 +1,5 @@
 <?php
+
 /**
  * データベース接続情報文字列定数群
  * DB_DSN 			データベース接続文字列：データベースに接続するための汎用接続情報
@@ -16,7 +17,7 @@ if (!defined("DB_PASSWORD")) define("DB_PASSWORD", "admin123");
  * @return PDO データベース接続に成功した場合はデータベース接続オブジェクト、それ以外はnull
  * @throw PDOException
  */
-function connectDatabase() {
+function connectDatabase():PDO {
 	// データベースに接続
 	$pdo = null;
 	try {
